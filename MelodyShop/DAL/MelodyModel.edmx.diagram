@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="02d6e008e5f04da187deee4977fef663" Name="Diagram1">
+        <EntityTypeShape EntityType="MelodyShopModel.Access" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelodyShopModel.Adress" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelodyShopModel.Cart" Width="1.5" PointX="9.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelodyShopModel.Contact" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelodyShopModel.Product" Width="1.5" PointX="7.5" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelodyShopModel.purchaseHistory" Width="1.5" PointX="12" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelodyShopModel.sysdiagram" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelodyShopModel.User" Width="1.5" PointX="7.5" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MelodyShopModel.UserType" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
+        <AssociationConnector Association="MelodyShopModel.FK_Access_Contact" ManuallyRouted="false" />
+        <AssociationConnector Association="MelodyShopModel.FK_Users_Access" ManuallyRouted="false" />
+        <AssociationConnector Association="MelodyShopModel.FK_Contact_Adress" ManuallyRouted="false" />
+        <AssociationConnector Association="MelodyShopModel.FK_Cart_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="MelodyShopModel.FK_Cart_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="MelodyShopModel.FK_purchaseHistory_Cart" ManuallyRouted="false" />
+        <AssociationConnector Association="MelodyShopModel.FK_Users_UsersType" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
