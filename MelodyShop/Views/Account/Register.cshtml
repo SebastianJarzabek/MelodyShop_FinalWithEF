@@ -1,9 +1,9 @@
 ﻿@model MelodyShop.Models.RegisterViewModel
 @{
-    ViewBag.Title = "Register";
+    ViewBag.Title = "Zarejestruj konto";
 }
 
-@using (Html.BeginForm("Zarejestruj konto", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
     @Html.AntiForgeryToken()
     <h4>Zarejestruj u nas swoje konto.</h4>

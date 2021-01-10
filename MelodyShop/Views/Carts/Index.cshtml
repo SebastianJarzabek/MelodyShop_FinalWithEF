@@ -1,0 +1,61 @@
+﻿@model IEnumerable<MelodyShop.DAL.Cart>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Koszyk</h2>
+
+<table class="table">
+
+    @if (Model.Any())
+    {
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Product.name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User.modyfity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.quantity)
+            </th>
+            <th></th>
+        </tr>
+
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Product.name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.User.modyfity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.quantity)
+                </td>
+                <td>
+                    @Html.ActionLink("Edytuj", "Edit", new { id = item.id }) |
+                    @Html.ActionLink("Szczegóły", "Details", new { id = item.id }) |
+                    @Html.ActionLink("Usuń", "Delete", new { id = item.id })
+                </td>
+            </tr>
+        }
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                @Html.ActionLink("Usuń", "Delete")
+            </div>
+        </div>
+
+
+
+    }
+    else
+    {
+        <h4>Twój koszyk jest pusty!</h4>
+    }
+
+
+</table>

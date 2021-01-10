@@ -7,10 +7,10 @@
 <h2>Dodaj nowy produkt</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -41,7 +41,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.detail, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.TextAreaFor(model => model.detail, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.TextAreaFor(model => model.detail, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.detail, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -60,4 +60,19 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/ckeditor/ckeditor.js"></script>
+    <script type="text/javascript" src="/js/ckeditor/ckeditor.js"></script>
+    <script type="text/javascript" src="/js/ckeditor/adapters/jquery.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#detail').ckeditor({
+                toolbar: 'Full',
+                enterMode: CKEDITOR.ENTER_BR,
+                shiftEnterMode: CKEDITOR.ENTER_P
+            });
+        });
+    </script>
+    <script>
+        CKEDITOR.replace("detail");
+    </script>
 }

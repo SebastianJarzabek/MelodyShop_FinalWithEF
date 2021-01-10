@@ -62,7 +62,7 @@ namespace MelodyShop.Models
     {
         [Required]
         [Phone]
-        [Display(Name = "Phone Number")]
+        [Display(Name = "Numer telefonur")]
         public string Number { get; set; }
     }
 
@@ -74,8 +74,8 @@ namespace MelodyShop.Models
 
         [Required]
         [Phone]
-        [Display(Name = "Phone Number")]
-        public string PhoneNumber { get; set; }
+    [Display(Name = "Numer telefonur")]
+    public string PhoneNumber { get; set; }
     }
 
     public class ConfigureTwoFactorViewModel

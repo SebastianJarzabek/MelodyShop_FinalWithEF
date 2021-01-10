@@ -31,5 +31,11 @@ namespace MelodyShop.Models
         }
 
     public System.Data.Entity.DbSet<MelodyShop.DAL.Product> Products { get; set; }
+
+    public System.Data.Entity.DbSet<MelodyShop.DAL.Cart> Carts { get; set; }
+
+    public System.Data.Entity.DbSet<MelodyShop.DAL.User> Users1 { get; set; }
+
+    public System.Data.Entity.DbSet<MelodyShop.DAL.Access> Accesses { get; set; }
   }
 }
