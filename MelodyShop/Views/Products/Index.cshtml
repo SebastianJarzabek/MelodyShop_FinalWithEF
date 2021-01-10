@@ -56,9 +56,6 @@
 }
 else
 {
-
-
-
     <h2>Lista produktów</h2>
 
     <table class="table">
@@ -96,7 +93,7 @@ else
                 <td>
                     <div class="form-group">
                         <div class="col-md-offset-2 col-md-10">
-                            <input type="submit" value="Dodaj do koszyka" class="btn btn-default" />
+                            @Html.ActionLink("Dodaj do koszyka", "Index", "Carts", new { id = item.id })
                         </div>
                     </div>
                 </td>
